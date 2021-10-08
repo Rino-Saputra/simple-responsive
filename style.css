@@ -1,0 +1,272 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: 'Varta';
+}
+
+p {
+   font-size: 0;
+   color: violet;
+}
+
+.container {
+    background-image: url(1.jpg);
+    background-size: cover;
+    background-position: right;
+    height: 100vh;
+} 
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5em 10%;
+    align-items: center;
+    animation: anm1 1s ease;
+}
+
+nav ul {
+    display: flex;
+    width: 30%;
+    justify-content: space-between;
+    list-style: none;
+    font-size: 0.8rem;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+nav .btn {
+    margin: 0 0 0 -2em;
+    animation: anm2 1s ease;
+}
+
+nav button {
+    color: black;
+    font-size: 0.7rem; 
+    padding: 0.6em 1.5em;
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    border-radius: 1.5em;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.5em 10%;
+    animation: anm3 1.6s ease forwards;
+}
+
+.create {
+    width: 80%;
+    padding: 1em 0;
+}
+
+.create h1 {
+    font-size: 6.5vmax;
+    font-weight: 100;
+}
+
+.real {
+    width: 40%;
+    padding: 1em 0;
+}
+
+.real h2 {
+    font-size: 2.2vmax;
+    font-weight: 100;
+}
+
+.btn-1 {
+    width: 90%;
+}
+
+.btn-1 button {
+    background-color: rgb(43, 38, 38);
+    font-size: 1.6vmax;
+    padding: 0.9em 1.8em;
+    border-radius: 1.5em;
+    outline: none;
+    border-style: none;
+    font-weight: bold;
+}
+
+footer {
+    padding: 1.5em 10%;
+    animation: anm4 2s ease;
+}
+
+footer button {
+    padding: 1.2em 1.2em;
+    margin: 0 0.5em;
+    background-color: transparent;
+    border-style: none;
+    cursor: pointer;
+    transition: 1s ease;
+}
+
+footer .btn1 {
+    background-image: url(email.png);
+    background-size: cover;
+}
+ footer .btn2 {
+     background-image: url(twitch.png);
+     background-size: cover;
+ }
+
+ footer .btn3 {
+     background-image: url(fb.png);
+     background-size: cover;
+ }
+
+nav a:hover {
+    color: rgb(54, 35, 71);
+}
+
+nav button:hover {
+    background-color: rgb(233, 231, 247);
+}
+
+section button:hover {
+    background-color: transparent;
+    border: 1px solid white;
+}
+
+footer button:active {
+    transform: scale(1.2);
+}
+
+
+@keyframes anm1 {
+    from {
+        margin-left: -10em;
+        opacity: 0;
+    }
+    to {
+        margin: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes anm2 {
+    from {
+        margin-right: 10em;
+        opacity: 0;
+    }
+    to {
+        margin-right: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes anm3 {
+    from {
+        margin-top: -10em;
+        opacity: 0;
+    }
+    to {
+        margin-top: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes anm4 {
+    from {
+        position: absolute;
+        margin-left: 10em;
+        opacity: 0;
+    }
+    to {
+        position: static;
+        margin-left: 0;
+        transform: rotate(360deg);
+        opacity: 1;
+    }
+}
+
+
+@media ( max-width:710px ) and (min-width:580px ) {
+    nav ul {
+        width: 50%;
+    }
+}
+
+@media (max-width: 579px) {
+    nav {
+        padding-bottom: 0;
+        flex-wrap: wrap;
+        background-color: rgb(238, 253, 249);
+    }
+
+    nav h1,a, .btn button {
+        color: black;
+        border-color: black;
+        font-weight: bold;
+    }
+
+    nav a {
+        padding: 0 0.5em;
+    }
+
+    nav ul {
+        width: 100%;
+        order: 1; 
+        padding: 1em 0;
+        margin: 0.6em 0 0 0;
+        border-top: 1px solid rgb(238, 224, 224);
+       justify-content: flex-start;
+    }
+
+    .create {
+        width: 100%;
+    }
+
+    .create h1 {
+        font-size: 4.5vmax;
+    }
+
+    .real {
+        width: 80%;
+    }
+
+    .create h2 {
+        font-size: 1vmax;
+    }
+
+    nav a:hover {
+        color: rgb(210, 164, 248);
+    }
+    
+    nav button:hover {
+        background-color: rgb(159, 153, 202);
+    }
+}
+
+@media (min-width: 711px){
+    .container {
+        display: none;
+    }
+
+    p {
+        font-size: 4rem;
+        margin: 0 auto;
+        animation: anm5 4s ease-in infinite ;
+    }
+
+    @keyframes anm5{
+        0% {
+            margin-left: 0;
+        }
+
+        80% {
+            opacity: 0;
+        }
+
+        100% {
+            margin-left: 100%;
+        }
+    }
+}
